@@ -1,27 +1,13 @@
-# Automated Skia builds
+# Automated Skia builds for VS2019
 
-This repo is dedicated to building Skia binaries for use in [Skija](https://github.com/JetBrains/skija) and [Skiko](https://github.com/JetBrains/skiko).
+This repo is forked from JetBrains/skia-build and dedicated to building Skia binaries for pure VS2019 project.
 
 ## Prebuilt binaries
 
-Prebuilt binaries can be found [in releases](https://github.com/JetBrains/skia-build/releases).
+Prebuilt binaries can be found [in releases](https://github.com/532479301/skia-build/releases).
 
-## Building next version of Skia
+## Why not use the binaries from JetBrains/skia-build
 
-Update `version` in [.github/workflows/build.yml](https://github.com/JetBrains/skia-build/blob/master/.github/workflows/build.yml).
-
-## Building locally
-
-```sh
-python3 script/checkout.py --version m91-b99622c05a
-python3 script/build.py
-python3 script/archive.py
-```
-
-To build a debug build:
-
-```sh
-python3 script/checkout.py --version m91-b99622c05a
-python3 script/build.py --build-type Debug
-python3 script/archive.py --build-type Debug
-```
+The Windows binaries from JetBrains/skia-build has two issues:
+* The Debug version do not linked to VC's Debug runtime, but Release runtime. So any project linked to skia.lib count error when build debug version.
+* Both binaries use VC's static Release runtime

@@ -4,7 +4,7 @@ This repo is forked from JetBrains/skia-build and dedicated to building Skia bin
 
 ## Prebuilt binaries
 
-Prebuilt binaries can be found [in releases](https://github.com/532479301/skia-build/releases).
+Prebuilt binaries can be found [in releases](https://github.com/orzMaster/skia-build/releases).
 
 ## Why not use the binaries from JetBrains/skia-build
 
